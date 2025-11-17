@@ -26,8 +26,8 @@ A robust project template for building REST APIs with **FastAPI** and **`mysql-c
 1.  **Clone the repository:**
 
     ```bash
-    git clone <your-repository-url>
-    cd <your-project-directory>
+    git clone https://github.com/kayljiyan/fastapi-mysql
+    cd fastapi-mysql
     ```
 
 2.  **Create and activate a virtual environment:**
