@@ -5,6 +5,7 @@ from mysql.connector.connection import MySQLConnection
 from .models import Student, Insert_Student, Delete_Student
 from .services import (
     get_students,
+    get_student_grades,
     get_student,
     insert_student,
     update_student,
@@ -18,6 +19,15 @@ router = APIRouter(prefix="/students")
 def api_get_students(conn: MySQLConnection = Depends(get_db_connection)):
     try:
         data = get_students(conn=conn)
+        return {"data": data}
+    except Exception as e:
+        return {"message": "Error occurred while executing function", "error": str(e)}
+
+
+@router.get("/grades")
+def api_get_student_grades(conn: MySQLConnection = Depends(get_db_connection)):
+    try:
+        data = get_student_grades(conn=conn)
         return {"data": data}
     except Exception as e:
         return {"message": "Error occurred while executing function", "error": str(e)}

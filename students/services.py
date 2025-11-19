@@ -10,6 +10,14 @@ def get_students(conn: MySQLConnection):
     return results
 
 
+def get_student_grades(conn: MySQLConnection):
+    cursor = conn.cursor()
+    query = "SELECT * FROM student_grades_view"
+    cursor.execute(query)
+    results = cursor.fetchall()
+    return results
+
+
 def get_student(conn: MySQLConnection, payload: models.Delete_Student):
     cursor = conn.cursor()
     query = "SELECT * FROM students WHERE student_id = %s"
