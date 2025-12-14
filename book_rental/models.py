@@ -39,3 +39,21 @@ class Insert_Rental(BaseModel):
 class Delete_Rental(BaseModel):
     """Data needed to return a book (using the unique rental ID)"""
     rental_id: int
+
+    # ==========================================
+# USER MODELS (ADDED THIS SECTION)
+# ==========================================
+
+class Insert_User(BaseModel):
+    """Fields required to register a user"""
+    name: str
+    email: str
+
+    # ==========================================
+# PAYMENT MODELS (NEW)
+# ==========================================
+
+class Insert_Payment(BaseModel):
+    rental_id: int
+    amount: float
+    notes: str = "Fine Payment"
