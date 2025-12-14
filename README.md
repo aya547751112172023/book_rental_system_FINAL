@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # FastAPI + MySQL Project Starter
 
 A robust project template for building REST APIs with **FastAPI** and **`mysql-connector-python`**. This project provides a clean structure for handling database operations, data validation, and API routing.
@@ -91,3 +92,6 @@ With your virtual environment active and the `.env` file in place, run the serve
 ```bash
 uvicorn main:app --reload
 ```
+=======
+# book_rental_system_F
+>>>>>>> 00f4885bdb0da0b0a293b0ca358e698361e4fbef
